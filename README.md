@@ -45,7 +45,9 @@ Body
 - build the user card on feed;
 - Edit Profile Features
 - Show Toast Message on save of profile
-- See all my connections
-
+- New Page: See all my connections
+- New Page: See all my Connection requests
 # axiox patch is not working
+
+- 
  
