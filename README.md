@@ -40,6 +40,6 @@ Body
 
 - You should not be access other routes without login
 - If take is not presen, redirect user to login page 
-- LogOut
+- LogOut Feature 
 - Profile
  

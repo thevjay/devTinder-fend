@@ -9,6 +9,7 @@ const Login = () => {
 
     const [ emailId, setEmailId ] = useState("rahul@example.com");
     const [ password, setPassword ] = useState("Secure@Pass123"); 
+    const [ Error, setError ] = useState("")
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -24,7 +25,9 @@ const Login = () => {
             navigate('/')
         }
         catch(err){
-            console.error(err);
+            //console.log(err.response.data.error)
+            setError(err?.response?.data?.error)
+            //console.error(err);
         }
 
     }
@@ -58,6 +61,7 @@ const Login = () => {
                         />
                     </label>
                 </div>
+                { Error && (<p className='text-red-800 py-2'>ERROR: {Error}</p>)}
                 <div className="card-actions justify-end p-2">
                     <button className="btn btn-primary" onClick={handleLogin}>Login</button>
                 </div>
