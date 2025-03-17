@@ -8,7 +8,9 @@ const UserCard = ({user}) => {
   <figure>
     <img
       src={photoUrl}
-      alt="Shoes" />
+      alt="Shoes"
+      className='w-[320px] p-4 object-cover' 
+    />
   </figure>
   <div className="card-body">
     <h2 className="card-title">{firstName +" "+ lastName}</h2>

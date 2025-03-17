@@ -41,5 +41,11 @@ Body
 - You should not be access other routes without login
 - If take is not presen, redirect user to login page 
 - LogOut Feature 
-- Profile
+- Get the feed and add the feed in the store
+- build the user card on feed;
+- Edit Profile Features
+- Show Toast Message on save of profile
+- See all my connections
+
+# axiox patch is not working
  
