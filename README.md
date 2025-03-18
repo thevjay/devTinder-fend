@@ -49,11 +49,11 @@ Body
 - New Page: See all my Connection requests
 - Feat: Accept/Reject Connection request
 - Feat: Send/Ignore the user card from the feed
+- - SignUp New USer
 
 Remaining:
-- SignUp New USer
 - E2E testing
--
+- 
 # axiox patch is not working
 
 - 

@@ -41,8 +41,9 @@ const EditProfile = ({user}) => {
         },3000);
     }
     catch(error){
-        //setError(err.response.error.data)
-        console.error(error)
+        //console.log(error.response)
+        setError(error.response.data.error)
+        //console.error(error)
     }
   }
 

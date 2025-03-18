@@ -70,7 +70,7 @@ const Requests = () => {
                     {age && gender && (<p>{age+" "+gender}</p>)}
                     <p>{about}</p>
                 </div>
-                <div className='flex'>
+                <div className='flex justify-end'>
                     <button className='btn btn-primary mx-2' onClick={()=>reviewRequest("rejected",request._id)}>Reject</button>
                     <button className='btn btn-secondary mx-2' onClick={()=>reviewRequest("accepted",request._id)}>Accept</button>
                 </div>
