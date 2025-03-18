@@ -48,9 +48,9 @@ Body
 - New Page: See all my connections
 - New Page: See all my Connection requests
 - Feat: Accept/Reject Connection request
+- Feat: Send/Ignore the user card from the feed
 
 Remaining:
-- Send/ignore the user card from feed
 - SignUp New USer
 - E2E testing
 -
