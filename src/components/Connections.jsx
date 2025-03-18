@@ -38,20 +38,19 @@ const Connections = () => {
         const { firstName, lastName, photoUrl, age, gender, about } = connection;
         
         return (
-            <div key={index} className='flex m-4 p-4 rounded-lg bg-base-200 w-1/2 mx-auto' >
-                <div>
+            <div key={index} className='flex flex-col sm:flex-row m-4 p-4 rounded-lg bg-base-200 w-full sm:w-1/2 mx-auto' >
+                <div className='flex justify-center sm:justify-start'>
                     <img 
                         alt='photo'
                         src={photoUrl}
-                        className='w-20 h-20 rounded-full'
+                        className='w-20 h-20 rounded-full obje'
                     />
                 </div>
-                <div className='text-left mx-4 '>
+                <div className='text-left mx-4 mt-2 sm:mt-0'>
                     <h2 className='font-bold text-xl'>{firstName+ " "+ lastName}</h2>
                     {age && gender && (<p>{age+" "+gender}</p>)}
                     <p>{about}</p>
                 </div>
-                 
             </div>
         )
       })}

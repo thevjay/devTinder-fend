@@ -47,6 +47,13 @@ Body
 - Show Toast Message on save of profile
 - New Page: See all my connections
 - New Page: See all my Connection requests
+- Feat: Accept/Reject Connection request
+
+Remaining:
+- Send/ignore the user card from feed
+- SignUp New USer
+- E2E testing
+-
 # axiox patch is not working
 
 - 

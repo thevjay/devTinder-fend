@@ -30,7 +30,7 @@ const Requests = () => {
                 withCredentials:true,
             });
 
-            console.log(res.data.data)
+            //console.log(res.data.data)
             dispatch(addRequests(res?.data?.data))
         }
         catch(err){
@@ -42,9 +42,9 @@ const Requests = () => {
         fetchRequests()
     },[])
 
-    if(!requests) return <h1>.....Loaging</h1>
+    if(!requests) return <h1 className='text-center my-10'>.....Loaging</h1>
 
-    if(requests.length === 0) return <h1> No Request Found</h1>
+    if(requests.length === 0) return <h1 className='text-center text-2xl font-bold my-10'> No Request Found</h1>
 
   return (
         <div className='mt-24'>
