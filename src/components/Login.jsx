@@ -31,9 +31,7 @@ const Login = () => {
             navigate('/')
         }
         catch(err){
-            //console.log(err.response.data.error)
-            setError(err?.response?.data?.error)
-            //console.error(err);
+            setError(err?.response?.data?.error || "Invalid credentails")
         }
 
     }
@@ -53,8 +51,7 @@ const Login = () => {
             navigate('/profile')
         }
         catch(error){
-            console.error(error)
-            setError(error?.response?.data?.error)
+            setError(error?.response?.data?.error || "Invalid credentials")
         }
         
     }
@@ -72,6 +69,7 @@ const Login = () => {
                         <input 
                             type="text" 
                             value={firstName}
+                            placeholder="firstName"
                             className="input input-bordered w-full max-w-xs" 
                             onChange={(e)=> setFirstName(e.target.value)}
                         />
@@ -83,6 +81,7 @@ const Login = () => {
                         <input 
                             type="text" 
                             value={lastName}
+                            placeholder="lastName"
                             className="input input-bordered w-full max-w-xs" 
                             onChange={(e)=> setLastName(e.target.value)}
                         />
@@ -94,6 +93,7 @@ const Login = () => {
                         <input 
                             type="text" 
                             value={emailId}
+                            placeholder="emailId"
                             className="input input-bordered w-full max-w-xs" 
                             onChange={(e)=> setEmailId(e.target.value)}
                         />
@@ -105,12 +105,13 @@ const Login = () => {
                         <input 
                             type="password" 
                             value={password}
+                            placeholder="Enter your password"
                             className="input input-bordered w-full max-w-xs" 
                             onChange={(e)=> setPassword(e.target.value)}
                         />
                     </label>
                 </div>
-                { Error && (<p className='text-red-800 py-2'>ERROR: {Error}</p>)}
+                { Error && (<p data-testid="error-message" className='text-red-800 py-2'>ERROR: {Error}</p>)}
                 <div className="card-actions justify-end p-2">
                     <button className="btn btn-primary" onClick={isLoginForm ? handleLogin : handleSignup}>
                         { isLoginForm ? "Login" : "SignUp" }
@@ -118,7 +119,7 @@ const Login = () => {
                 </div>
                 <p className='cursor-pointer justify-start' onClick={()=>setIsLoginForm((value)=>!value)}>
                     {   isLoginForm 
-                        ? "Now User? Signup Here"
+                        ? "New User? Signup Here"
                         : "Existing User? Login Here"
                     }
                 </p>

@@ -6,15 +6,13 @@ import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 
 const EditProfile = ({user}) => {
-  const [firstName, setFirstName] = useState(user.firstName);
-  const [lastName, setLastName] = useState(user.lastName);
-  const [age, setAge] = useState(user.age|| '');
-  const [gender, setGender] = useState(user.gender || '');
-  const [photoUrl, setPhotoUrl] = useState(user.photoUrl);
-  //const [skills, setSkills] = useState([]); 
-  const [about, setAbout] = useState(user.about);
+  const [firstName, setFirstName] = useState(user.firstName || "");
+  const [lastName, setLastName] = useState(user.lastName || "");
+  const [age, setAge] = useState(user.age|| "");
+  const [gender, setGender] = useState(user.gender || "");
+  const [photoUrl, setPhotoUrl] = useState(user.photoUrl || null)
+  const [about, setAbout] = useState(user.about || "");
   const [error, setError] = useState('');
-  //const [newSkill, setNewSkill] = useState(''); // For inputting a new skill
 
   const dispatch = useDispatch();
 
@@ -41,25 +39,11 @@ const EditProfile = ({user}) => {
         },3000);
     }
     catch(error){
-        //console.log(error.response)
         setError(error.response.data.error)
-        //console.error(error)
     }
   }
 
 
-//   // Function to add skill
-//   const addSkill = () => {
-//     if (newSkill.trim() !== '' && !skills.includes(newSkill)) {
-//       setSkills([...skills, newSkill]); // Add new skill to array
-//       setNewSkill(''); // Clear input field
-//     }
-//   };
-
-//   // Function to remove skill
-//   const removeSkill = (skillToRemove) => {
-//     setSkills(skills.filter((skill) => skill !== skillToRemove));
-//   };
 
   return (
     <>
@@ -122,37 +106,6 @@ const EditProfile = ({user}) => {
                 onChange={(e) => setAbout(e.target.value)} 
               />
             </label>
-
-            {/* Skills Section */}
-            {/* <label className="form-control w-full max-w-xs my-4">
-              <span className="label-text">Skills</span>
-              <div className="flex gap-2">
-                <input 
-                  type="text" value={newSkill} 
-                  className="input input-bordered w-full max-w-xs" 
-                  onChange={(e) => setNewSkill(e.target.value)} 
-                  placeholder="Add a skill"
-                />
-                <button className="btn btn-primary" onClick={addSkill}>Add</button>
-              </div>
-            </label> */}
-
-            {/* Display Added Skills */}
-            {/* <div className="mt-2">
-              {skills.length > 0 && (
-                <div>
-                  <p className="font-semibold">Added Skills:</p>
-                  <div className="flex flex-wrap gap-2">
-                    {skills.map((skill, index) => (
-                      <span key={index} className="badge badge-info flex items-center gap-1">
-                        {skill}
-                        <button className="ml-2 text-red-500" onClick={() => removeSkill(skill)}>✖</button>
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div> */}
           </div>
 
           {error && (<p className="text-red-800 py-2">ERROR: {error}</p>)}
