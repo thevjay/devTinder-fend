@@ -161,3 +161,16 @@ test('renders the app correctly', () => {
 - afterEach(()=>{
   consloe.log("After Each test case)
 })
+
+
+
+# Real Time Chat using Websocket(Socket.io)
+- - Build the UI for a chat window on /chat/:targetUserId
+- npm install socket.io-client
+- Intiallse the chat
+- createSocketConnection
+- Listen to events
+
+-  when Production level code before deploy the code will change in the fend socket.js code
+
+36
