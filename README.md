@@ -1,3 +1,27 @@
+
+🚀 Just Built DevLink – A Developer Networking Platform (My Latest Project!)
+I'm excited to share a project I've been working on: DevLink, a platform that helps developers discover each other, collaborate, and chat in real-time. Think of it as a professional network built for devs, by a dev!
+
+🔨 What I Built
+Skill-Based Matching – Find developers with similar tech stacks & interests
+Real-Time Chat – Instant messaging using WebSockets (no more email delays!)
+Connection System – Send/accept requests with email notifications (Nodemailer + Cron)
+Secure Auth – JWT-based access control to keep things safe
+
+🛠️ My Tech Stack
+▸ Frontend: React + Tailwind CSS
+▸ Backend: Node.js + Express
+▸ Real-Time: WebSockets
+▸ Emails: Nodemailer & CronJobs
+▸ Deployment: AWS
+
+🌍 Live Demo:
+
+This was a fun challenge—especially implementing real-time features and optimizing the connection system. Learned a ton along the way!
+Would love your thoughts:
+What features would you add?
+Any feedback on the UI/UX?
+
 # Vite APp
 - # Scaffolding Your First Vite Project
 - - $ npm create vite@latest devFrontend -- --template react
